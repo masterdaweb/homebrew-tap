@@ -5,13 +5,13 @@
 class Mw < Formula
   desc "Master da Web from the terminal — VPS instances, serverless apps, databases, storage and network"
   homepage "https://www.masterdaweb.com"
-  version "0.4.1"
+  version "0.4.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.1/mw_0.4.1_darwin_amd64.tar.gz"
-      sha256 "8a64752de0d01d67e48911b4b7f0a7dda999600c21ac809515ac252fed49aac2"
+      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.2/mw_0.4.2_darwin_amd64.tar.gz"
+      sha256 "5f78a14303abc0641da2097f47207bd1eb706a54ec38f90fd3d62c54402cca28"
 
       define_method(:install) do
         bin.install "mw"
@@ -19,8 +19,8 @@ class Mw < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.1/mw_0.4.1_darwin_arm64.tar.gz"
-      sha256 "0e746f6fdb47848fd3b2838d6d05b5211add656f22734471b4ceee6c3432d650"
+      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.2/mw_0.4.2_darwin_arm64.tar.gz"
+      sha256 "e117e793d77acf74bd60acbbcc41d520df4500c9ddd8849b1cc9ab280d1c8c32"
 
       define_method(:install) do
         bin.install "mw"
@@ -31,16 +31,16 @@ class Mw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.1/mw_0.4.1_linux_amd64.tar.gz"
-      sha256 "eea94d02c2b0368be86d16d2d3d3257be31b1d5c87a20c72d807c84744fb787d"
+      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.2/mw_0.4.2_linux_amd64.tar.gz"
+      sha256 "72e1714886057bd71ead68904ea5621688e4f0027819fe1e7e9b187fc74e462e"
       define_method(:install) do
         bin.install "mw"
         generate_completions_from_executable(bin/"mw", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.1/mw_0.4.1_linux_arm64.tar.gz"
-      sha256 "0d210e39059db6d87f685a3acf8efe323d2d87f3b08e19aa4683ebda482855d4"
+      url "https://github.com/masterdaweb/mw-cli/releases/download/v0.4.2/mw_0.4.2_linux_arm64.tar.gz"
+      sha256 "43cf6eda5526e54e8284abb3a62ab804343d818505fdce6240c0c725345002e6"
       define_method(:install) do
         bin.install "mw"
         generate_completions_from_executable(bin/"mw", "completion")
